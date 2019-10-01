@@ -20,40 +20,37 @@
 
     <section class="section blog" id="blog"  :style="{ minHeight: screenHeight + 'px' }">
       
-      <div class="section__left background--pink" id="needsFixing" :style="{ top: blogTop + 'px' }">
+      <div class="section__left background--blue" id="needsFixing" :style="{ top: blogTop + 'px' }">
         <div class="section__info" :style="{ height: screenHeight + 'px' }">
           <div class="middle text--align-center text--white">
             <h2 class="blog__header">My Blog</h2>
-            <button class="btn btn--blue btn__text--lrg">More Adventures!</button>
+            <button class="btn btn--blue btn__text--lrg btn--slightly-rounded">More Adventures!</button>
           </div>
         </div>
 
       </div>
       <div class="section__right">
-        <div class="section__content">
-          <div class="blog-post">
-            <h1 class="blog-post__title">Title #1</h1>
-            <p class="blog-post__excerpt">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloremque deleniti odio repellendus velit a temporibus. Consequatur at quis voluptatum quos.</p>
-            <p class="blog-post__more">READ MORE</p>
-          </div>
-          <div class="blog-post">
-          <g-image width="600px" height="400px" src="~/assets/imgs/blog-post-two.jpg"></g-image>
-            <h1 class="blog-post__title">Summer Recipe - Apple, Cherry Crisp #2</h1>
+        <div class="blog-post">
+          <a class="blog-post__container" href="">
+            <g-image class="blog-post__image" src="~/assets/imgs/blog-post-one.jpg"/>
+            <div class="blog-post__info">
+              <h1 class="blog-post__title">Title #1</h1>
+              <p class="blog-post__excerpt">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloremque deleniti odio repellendus velit a temporibus. Consequatur at quis voluptatum quos.</p>
+              <p class="blog-post__more">READ MORE</p>
+            </div>
+
+          </a>
+        </div>
+
+       <div class="blog-post">
+          <a class="blog-post__container" href="">
+            <g-image class="blog-post__image" src="~/assets/imgs/blog-post-two.jpg"/>
+            <h1 class="blog-post__title">Summer Recipe - Apple, Cherry Crisp</h1>
             <p class="blog-post__excerpt">In my travels this Summer, I found myself on Chebeague Island in Maine with my family. It was a beautiful island of only 341 inhabitants...</p>
             <p class="blog-post__more">READ MORE</p>
-          </div>
-          <div class="blog-post">
-            <h1 class="blog-post__title">Title #3</h1>
-            <p class="blog-post__excerpt">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloremque deleniti odio repellendus velit a temporibus. Consequatur at quis voluptatum quos.</p>
-            <p class="blog-post__more">READ MORE</p>
-          </div>
-          <div class="blog-post">
-            <h1 class="blog-post__title">Title #4</h1>
-            <p class="blog-post__excerpt">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloremque deleniti odio repellendus velit a temporibus. Consequatur at quis voluptatum quos.</p>
-            <p class="blog-post__more">READ MORE</p>
-          </div>
-
+          </a>
         </div>
+
       </div>
     </section>
 
@@ -250,6 +247,54 @@ header{
     font-size: 75px;
     color: #fff;
   }
+  
+.blog-post {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  left: 0;
+
+  &__container {
+    display: block;
+    overflow: hidden;
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 500px;
+  }
+
+  &__container::before {
+    content: '';
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+    
+  }
+
+  &__image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: scale(1);
+    transition: 15s transform linear;
+  }
+
+  &__image:hover {
+    transform: scale(2);
+  }
+
+  &__info {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    vertical-align: middle;
+  }
+
+}  
+
 }
 .instagram {
   background-color: green;
@@ -287,7 +332,10 @@ header{
   }
 
   &__content {
-    padding: 96px;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    left: 0;
   }
 }
 
@@ -295,7 +343,6 @@ header{
   display: inline-block;
   width: 100%;
   vertical-align: middle;
-
 }
 
 .text {
@@ -326,7 +373,7 @@ header{
     background-size: cover;
   }
 
-  &--pink {
+  &--blue {
     background-color: #64B6AC;
   }
 }
