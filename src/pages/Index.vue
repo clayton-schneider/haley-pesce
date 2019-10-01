@@ -24,7 +24,7 @@
         <div class="section__info" :style="{ height: screenHeight + 'px' }">
           <div class="middle text--align-center text--white">
             <h2 class="blog__header">My Blog</h2>
-            <button class="btn btn--blue">More Adventures!</button>
+            <button class="btn btn--blue btn__text--lrg">More Adventures!</button>
           </div>
         </div>
 
@@ -247,7 +247,7 @@ header{
   
   &__header {
     font-family: 'handlee', cursive;
-    font-size: 50px;
+    font-size: 75px;
     color: #fff;
   }
 }
@@ -350,8 +350,12 @@ header{
     border-radius: 3px;
   }
 
-  &__font {
+  &__text {
     font-size: 15px;
+
+    &--lrg {
+      font-size: 20px;
+    }
   }
 
 }
