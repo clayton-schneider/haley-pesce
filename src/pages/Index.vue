@@ -36,7 +36,7 @@
         <div class="blog-post">
           <a class="blog-post__container" href="">
             <div class="blog-post__image-container">
-              <g-image class="blog-post__image" width="850" src="~/assets/imgs/blog-post-one.jpg"/>
+              <!-- <g-image class="blog-post__image" width="850" src="~/assets/imgs/blog-post-one.jpg"/> -->
             </div>
             <div class="blog-post__info">
               <h1 class="blog-post__title">Title #1</h1>
@@ -49,7 +49,7 @@
         <div class="blog-post">
           <a class="blog-post__container" href="">
             <div class="blog-post__image-container">
-              <g-image class="blog-post__image" width="850" src="~/assets/imgs/blog-post-two.jpg"/>
+              <!-- <g-image class="blog-post__image" width="850" src="~/assets/imgs/blog-post-two.jpg"/> -->
             </div>
             <div class="blog-post__info">
               <h1 class="blog-post__title">Title #1</h1>
@@ -227,6 +227,12 @@ export default {
 <style lang="scss" scoped>
 @import url('https://fonts.googleapis.com/css?family=Handlee&display=swap');
 
+body {
+  font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+  margin:0;
+  padding:0;
+  line-height: 1.5;
+}
 
 .main-site {
   z-index: 300;
