@@ -18,56 +18,91 @@
         </div>
     </section>
 
-    <section class="section blog" id="blog"  :style="{ minHeight: screenHeight + 'px' }">
+    <section class="section blog" id="blog"  :style="{ minHeight: 1254 + 'px' }">
       
-      <div class="section__left background--blue" id="needsFixing" :style="{ top: blogTop + 'px' }">
+      <div class="section__left background--blue" id="fixBlog" :style="{ top: blogTop + 'px' }">
         <div class="section__info" :style="{ height: screenHeight + 'px' }">
           <div class="middle text--align-center text--white">
-            <h2 class="blog__header">My Blog</h2>
+            <h2 class="blog__header">Follow My <br> Adventures</h2>
             <button class="btn btn--blue btn__text--lrg btn--slightly-rounded">More Adventures!</button>
           </div>
         </div>
 
       </div>
+
+      
       <div class="section__right">
+
         <div class="blog-post">
           <a class="blog-post__container" href="">
-            <g-image class="blog-post__image" src="~/assets/imgs/blog-post-one.jpg"/>
+            <div class="blog-post__image-container">
+              <g-image class="blog-post__image" width="850" src="~/assets/imgs/blog-post-one.jpg"/>
+            </div>
             <div class="blog-post__info">
               <h1 class="blog-post__title">Title #1</h1>
               <p class="blog-post__excerpt">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloremque deleniti odio repellendus velit a temporibus. Consequatur at quis voluptatum quos.</p>
               <p class="blog-post__more">READ MORE</p>
             </div>
-
           </a>
         </div>
 
-       <div class="blog-post">
+        <div class="blog-post">
           <a class="blog-post__container" href="">
-            <g-image class="blog-post__image" src="~/assets/imgs/blog-post-two.jpg"/>
-            <h1 class="blog-post__title">Summer Recipe - Apple, Cherry Crisp</h1>
-            <p class="blog-post__excerpt">In my travels this Summer, I found myself on Chebeague Island in Maine with my family. It was a beautiful island of only 341 inhabitants...</p>
-            <p class="blog-post__more">READ MORE</p>
+            <div class="blog-post__image-container">
+              <g-image class="blog-post__image" width="850" src="~/assets/imgs/blog-post-two.jpg"/>
+            </div>
+            <div class="blog-post__info">
+              <h1 class="blog-post__title">Title #1</h1>
+              <p class="blog-post__excerpt">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloremque deleniti odio repellendus velit a temporibus. Consequatur at quis voluptatum quos.</p>
+              <p class="blog-post__more">READ MORE</p>
+            </div>
           </a>
         </div>
-
       </div>
-    </section>
-
-    <section class="section instagram background-color--red" id="instagram" :style="{ minHeight: screenHeight + 'px' }">
 
     </section>
 
-    <section class="section background-color--teal" id="test" :style="{ minHeight: screenHeight + 'px' }">
+    <section class="section instagram" id="instagram" :style="{ minHeight: instaHeight + 'px' }">
+      
+      <div class="section__left">
+        <div class="instagram__container">
+          <div class="instagram__image" v-for="(item, index) in $page.allinstagram.edges" :key="index"><a :href="item.node.url" target="_blank">
+            <g-image :src="item.node.stdRes"/>
+          </a></div>
+        </div>
+      </div>
+
+      <div class="section__right background--purple" id="fixInsta" :style="{ top: instaTop + 'px' }">
+        <div class="section__info" :style="{ height: screenHeight + 'px' }">
+          <div class="middle text--align-center text--white">
+            <h2 class="blog__header">Want more good eats?</h2>
+            <button class="btn btn--purple btn__text--lrg btn--slightly-rounded">More Food!</button>
+          </div>
+        </div>
+      </div>
 
     </section>
-    
+
+    <section class="section footer" id="footer">
+      <h3 class="footer__content">©2019 by HCP Lifestyle | Created by <a href="www.simply-sprout.com">Simply Sprout</a></h3>
+    </section>
+        
   </body>
-
-
-
-
 </template>
+
+<page-query>
+{
+	allinstagram {
+    edges {
+      node {
+        url
+        lowRes
+        stdRes
+      }
+    }
+  }
+}
+</page-query>
 
 <script>
 export default {
@@ -77,7 +112,9 @@ export default {
   data: function() {
     return {
       screenHeight: 0,
-      blogTop: 0
+      instaHeight: 0,
+      blogTop: 0,
+      instaTop: 0
     }
   },
   mounted: function() {
@@ -86,12 +123,17 @@ export default {
       this.getScreenHeight();
     });
     this.setupViewport();
+    this.setInstaHeight();
     this.typewriter(['Food Enthusiast', 'Traveler', 'Lifestyle'], 1500);
   },
   methods: {
     getScreenHeight() {
       this.screenHeight = window.innerHeight;
     },
+    setInstaHeight() {
+      const height = document.querySelector('.instagram__container').offsetHeight;
+      this.instaHeight = height;
+    }, 
     setTopSection(section) {
       const elemHeight = document.getElementById(section).offsetHeight;
       const topHeight = elemHeight - this.screenHeight + 1;
@@ -109,19 +151,34 @@ export default {
         observer.observe(section);
       });      
       function beTouching(entries) {
-        const needsFixing = document.getElementById('needsFixing');
+        const fixBlog = document.getElementById('fixBlog');
+        const fixInsta = document.getElementById('fixInsta')
         entries.forEach((entry) => {
           if (entries.length < 2) {
             if(entry.target.id == 'landing' && !entry.isIntersecting) {
-                needsFixing.classList.add("fixed");
+                fixBlog.classList.add("fixed");
+                fixInsta.classList.remove("fixed");
             } else if (entry.target.id == 'landing' && entry.isIntersecting) {
-                needsFixing.classList.remove("fixed");
+                fixBlog.classList.remove("fixed");
+                fixInsta.classList.remove("fixed");
             } else if (entry.target.id == 'instagram' && entry.isIntersecting) {
-                needsFixing.classList.remove("fixed");
+                fixBlog.classList.remove("fixed");
+                fixInsta.classList.remove("fixed");
                 vm.blogTop = vm.setTopSection('blog');
             } else if(entry.target.id == 'instagram' && !entry.isIntersecting) {
-                needsFixing.classList.add("fixed");
+                fixBlog.classList.add("fixed");
+                fixInsta.classList.remove("fixed");
                 vm.blogTop = 0;
+            } else if (entry.target.id == 'blog' && !entry.isIntersecting) {
+                fixInsta.classList.add("fixed");
+            } else if (entry.target.id == 'footer' && entry.isIntersecting) {
+                fixInsta.classList.remove("fixed");
+                vm.instaTop = vm.setTopSection('instagram');
+            } else if (entry.target.id == 'footer' && !entry.isIntersecting) {
+                fixInsta.classList.add("fixed");
+                vm.instaTop = 0;
+            } else{
+              fixInsta.classList.remove("fixed");
             }
           }
         })
@@ -169,6 +226,7 @@ export default {
 
 <style lang="scss" scoped>
 @import url('https://fonts.googleapis.com/css?family=Handlee&display=swap');
+
 
 .main-site {
   z-index: 300;
@@ -247,43 +305,28 @@ header{
     font-size: 75px;
     color: #fff;
   }
+}
   
 .blog-post {
-  overflow: hidden;
-  position: relative;
-  width: 100%;
-  left: 0;
+
+  padding: 50px;
+  
+  a {
+    color: #000;
+  }
+
 
   &__container {
-    display: block;
+    width: 100%;
+
+  }
+
+  &__image-container {
+    height: 300px;;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     overflow: hidden;
-    position: relative;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 500px;
-  }
-
-  &__container::before {
-    content: '';
-    display: inline-block;
-    height: 100%;
-    vertical-align: middle;
-    
-  }
-
-  &__image {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    transform: scale(1);
-    transition: 15s transform linear;
-  }
-
-  &__image:hover {
-    transform: scale(2);
   }
 
   &__info {
@@ -293,11 +336,44 @@ header{
     vertical-align: middle;
   }
 
+  &__title {
+    font-weight: bold;
+    font-size: 1.602em;
+    margin: 2.75rem 0 1rem;
+  }
+
+  &__excerpt {
+    margin-bottom: 1.25em;
+    font-size: 20px;
+    color: #444;
+  }
+
 }  
+
+.footer {
+  display: flex;
+  justify-content: center;
+
+  a {
+    color: #181818;
+    text-decoration: none;
+  }
+
+  &__content {
+    font-size: 14px;
+    color: #181818;
+  }
 
 }
 .instagram {
-  background-color: green;
+
+  &__container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 50px;
+  }
+  
 }
 
 .section {
@@ -331,6 +407,10 @@ header{
     z-index: 100;
   }
 
+    &__right.fixed {
+    position: fixed;
+  }
+
   &__content {
     overflow: hidden;
     position: relative;
@@ -356,17 +436,6 @@ header{
   }
 }
 
-.background-color {
-
-  &--teal {
-    background-color: teal;
-  }
-
-  &--red {
-    background-color: red;
-  }
-}
-
 .background {
   &--main {
     background: linear-gradient(0deg,rgba(35, 37, 68, 0.7),rgba(35, 37, 68, 0.7)),url('~@/assets/imgs/hero.jpg') bottom center; 
@@ -376,6 +445,14 @@ header{
   &--blue {
     background-color: #64B6AC;
   }
+
+  &--purple {
+    background-color: #232543;
+  }
+
+  &--pink {
+    background-color: #ceabb1;
+  }
 }
 
 .btn {
@@ -383,6 +460,7 @@ header{
   border-width: 2px;
   padding: 12px 60px;
   background-color: rgba(0,0,0,0);
+
   &--blue {
     border-color: #fff;
     color: #fff;
@@ -391,6 +469,17 @@ header{
     background-color: #fff;
     color: #64b6ac;
     transition: 0.25s ease-in-out
+  }
+
+  &--purple {
+    border-color: #fff;
+    color: #fff;
+  }
+
+  &--purple:hover {
+    background-color: #fff;
+    color: #232543;
+    transition: 0.25s ease-in-out;
   }
 
   &--slightly-rounded {
@@ -405,12 +494,10 @@ header{
     }
   }
 
+  &:focus{
+    outline: none;
+  }
+
 }
-
-.btn:focus {
-  outline: none;
-}
-
-
 
 </style>

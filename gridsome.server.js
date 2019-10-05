@@ -5,12 +5,22 @@
 // Changes here require a server restart.
 // To restart press CTRL + C in terminal and run `gridsome develop`
 
-module.exports = function (api) {
-  api.loadSource(({ addContentType }) => {
-    // Use the Data Store API here: https://gridsome.org/docs/data-store-api
-  })
+const axios = require('axios')
 
-  api.createPages(({ createPage }) => {
-    // Use the Pages API here: https://gridsome.org/docs/pages-api
+module.exports = function (api) {
+  api.loadSource(async actions => {
+    const { data } = await axios.get('https://api.instagram.com/v1/users/self/media/recent?access_token=1902688513.09500a2.2e02639627734727ba0f482517de8be2&count=8   ')
+
+    const contentType = actions.addContentType({
+      typeName: 'instagram'
+    })
+
+    for (const item of data.data) {
+      contentType.addNode({
+        url: item.link,
+        lowRes: item.images.low_resolution.url,
+        stdRes: item.images.standard_resolution.url
+      })
+    }
   })
 }
