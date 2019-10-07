@@ -8,6 +8,7 @@
           <g-link class="nav__link" to="/about">About</g-link>
           <g-link class="nav__link" to="/contact">Contact</g-link>
           <g-link class="nav__link" to="/blog">Blog</g-link>
+          <g-link class="nav__link" to="/test">home</g-link>
         </nav>
       </header>
       <div class="main-site__content">
@@ -32,11 +33,24 @@
 
       
       <div class="section__right">
+        <div class="blog-post" v-for="(item) in $page.blog.edges" :key="item.node.id">
+          <a :href="item.node.path" class="blog-post__container">
+            <div class="blog-post__image-container">
+              <g-image class="blog-post__image" :src="item.node.featuredImage"/>
+            </div>
+            <div class="blog-post__info">
+              <h1 class="blog-post__title">{{ item.node.title }}</h1>
+              <p class="blog-post__excerpt">{{ item.node.content }}</p>
+              <p class="blog-post__more">READ MORE</p>
+            </div>
+          </a>
+        </div>
 
-        <div class="blog-post">
+
+        <!-- <div class="blog-post">
           <a class="blog-post__container" href="">
             <div class="blog-post__image-container">
-              <!-- <g-image class="blog-post__image" width="850" src="~/assets/imgs/blog-post-one.jpg"/> -->
+              <g-image class="blog-post__image" width="850" src="~/assets/imgs/blog-post-one.jpg"/>
             </div>
             <div class="blog-post__info">
               <h1 class="blog-post__title">Title #1</h1>
@@ -44,12 +58,12 @@
               <p class="blog-post__more">READ MORE</p>
             </div>
           </a>
-        </div>
+        </div> -->
 
-        <div class="blog-post">
+        <!-- <div class="blog-post">
           <a class="blog-post__container" href="">
             <div class="blog-post__image-container">
-              <!-- <g-image class="blog-post__image" width="850" src="~/assets/imgs/blog-post-two.jpg"/> -->
+              <g-image class="blog-post__image" width="850" src="~/assets/imgs/blog-post-two.jpg"/>
             </div>
             <div class="blog-post__info">
               <h1 class="blog-post__title">Title #1</h1>
@@ -57,7 +71,7 @@
               <p class="blog-post__more">READ MORE</p>
             </div>
           </a>
-        </div>
+        </div> -->
       </div>
 
     </section>
@@ -66,7 +80,7 @@
       
       <div class="section__left">
         <div class="instagram__container">
-          <div class="instagram__image" v-for="(item, index) in $page.allinstagram.edges" :key="index"><a :href="item.node.url" target="_blank">
+          <div class="instagram__image" v-for="(item, index) in $page.instagram.edges" :key="index"><a :href="item.node.url" target="_blank">
             <g-image :src="item.node.stdRes"/>
           </a></div>
         </div>
@@ -91,12 +105,22 @@
 </template>
 
 <page-query>
-{
-	allinstagram {
+query {
+  blog: allBlog(sortBy: "DESC") {
+    edges {
+      node {
+        id
+        title
+        content
+        path
+        featuredImage (width: 850)
+      }
+    }
+  }
+  instagram: allinstagram {
     edges {
       node {
         url
-        lowRes
         stdRes
       }
     }
@@ -203,7 +227,7 @@ export default {
 
         document.querySelector('.main-site__typewriter').textContent = txt;
 
-        let typeSpeed = 300;
+        let typeSpeed = 150;
 
         if(isDeleting) {
           typeSpeed /=2;
@@ -281,7 +305,7 @@ header{
   width: 80%;
   margin: auto;
   align-items: center;
-  min-height: 20vh;
+  min-height: 15vh;
 }
 
 .logo-container {
