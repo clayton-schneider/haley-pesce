@@ -4,7 +4,7 @@
       <div class="header__container">
         <div class="logo-container"><g-image src="~/assets/imgs/logo.png" width="55px"></g-image></div>
         <nav class="nav">
-          <g-link class="nav__link" to="/">Home</g-link>
+          <g-link class="nav__link" to="/test">Home</g-link>
           <g-link class="nav__link" to="/about">About</g-link>
           <g-link class="nav__link" to="/contact">Contact</g-link>
           <g-link class="nav__link" to="/blog">Blog</g-link>
@@ -14,8 +14,8 @@
     </header>
     <slot/>
 
-    <section class="section footer" id="footer">
-      <h3 class="footer__content">©2019 by HCP Lifestyle | Created by <a href="www.simply-sprout.com">Simply Sprout</a></h3>
+    <section class="footer">
+        <h4 class="footer__text">©2019 by HCP Lifestyle | Created by <a href="https://www.simply-sprout.com">Simply Sprout</a></h4>
     </section>
   </div>
 </template>
@@ -29,9 +29,13 @@ query {
 </static-query>
 
 <style lang="scss">
+@import url('https://fonts.googleapis.com/css?family=Arvo:400,700&display=swap');
+
+$breakpoint-tablet: 1040px;
+$breakpoint-mobile: 768px;
 
 body {
-  font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+  font-family: 'Arvo', serif;
   margin:0;
   padding:0;
   line-height: 1.5;
@@ -44,24 +48,33 @@ body {
 
   &__container {
     display: flex;
-    width: 80%;
+    width: 90%;
+    @media (min-width: $breakpoint-mobile) {
+      width: 80%
+    }
     margin: auto;
     align-items: center;
   }
 }
 
 .logo-container {
-  flex: 3;
+  flex: 1;
+  @media (min-width: $breakpoint-tablet) {
+    flex: 3;
+  }
 }
 
 .nav {
   display: flex;
-  flex: 1;
+  flex: 3;
   justify-content: space-around;
+  @media (min-width: $breakpoint-tablet) {
+    flex: 1;
+  }
+
   &__link {
     color: #fff;
-    font-size: 22px;
-    font-weight: 300;
+    font-size: 18px;
     text-decoration: none;
   }
 
@@ -79,15 +92,17 @@ body {
 .footer {
   display: flex;
   justify-content: center;
+  padding-top: 55px;
 
   a {
-    color: #181818;
+    color: #777777;
     text-decoration: none;
   }
 
-  &__content {
-    font-size: 14px;
-    color: #181818;
+  &__text {
+      margin: 10px 0;
+      font-size: 14px;
+      color: #777777;
   }
 
 }

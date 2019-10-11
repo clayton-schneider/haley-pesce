@@ -6,23 +6,21 @@
 
       </div>
       <div class="right">
-        <h1 class="txt-center">Contact Me!</h1>
+        <h1 class="right__headline">Contact Me!</h1>
         <form class="form" action="">
           <div class="form__name">
-            <input size="1" type="text" name="form_fields[name]" id="form-field-name" class="" placeholder="Name">
-            <label for="form-field-name" class="">Name</label>
+            <label for="form-field-name" class="form__label">Name</label>
+            <input size="1" type="text" name="form_fields[name]" id="form-field-name" class="form__input">
           </div>
           <div class="form__email">
-            <label for="form-field-email" class="elementor-field-label elementor-screen-only">Email</label>
-            <input size="1" type="email" name="form_fields[email]" id="form-field-email" class="" placeholder="Email" required="required" aria-required="true">
+            <label for="form-field-email" class="form__label">Email</label>
+            <input size="1" type="email" name="form_fields[email]" id="form-field-email" class="form__input" required="required" aria-required="true">
           </div>
           <div class="form__message">
-            <label for="form-field-message" class="elementor-field-label elementor-screen-only">Message</label>
-            <textarea class="" name="form_fields[message]" id="form-field-message" rows="4" placeholder="Message"></textarea>
+            <label for="form-field-message" class="form__label">Message</label>
+            <textarea class="form__textarea" name="form_fields[message]" id="form-field-message" rows="4"></textarea>
           </div>
-          <div class="form__button">
-            <button>Submit</button>
-          </div>
+          <button class="form__button">Submit</button>
 
         </form>
       </div>
@@ -41,6 +39,7 @@ export default {
 <style lang="scss" scoped>
 section {
   display: flex;
+  flex-wrap: wrap;
 }
 
 .left {
@@ -51,12 +50,15 @@ section {
 .right {
   flex: 1;
   margin: 50px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 
-    h1 {
-    color: #64b5ac;
-    font-size: 50px;
-    font-weight: 300;
-  }
+    &__headline {
+      color: #64b5ac;
+      font-size: 50px;
+      font-weight: 300;
+    }
 
   p {
     font-size: 20px;
@@ -65,26 +67,72 @@ section {
   }
 }
 
-.txt-center {
-  text-align: center;
-}
-
 
 
 .form {
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
+  width: 430px;
+
+  &__label {
+    flex: 100%;
+    font-size: 20px;
+    color: #777777;
+  }
+  
+
+  &__input {
+    flex: 100%;
+    border-radius: 5px;
+    line-height: 2;
+    border: 1px solid #707070;
+    outline: none;
+  }
+
+  &__textarea {
+    border-radius: 5px;
+    border: 1px solid #707070;
+    outline: none;
+  }
 
   &__name {
-    width: 50%;
+    // flex: 50%;
+    width: 182px;
+    display: flex;
+    flex-direction: column;
   }
 
   &__email {
-    width: 50%;
+    // flex: 50%;
+    width: 182px;
+    display: flex;
+    flex-direction: column;
   }
 
   &__message {
-    width: 100%;
+    // flex: 100%;
+    width: 430px;
+    display: flex;
+    flex-direction: column;
+    margin: 35px 0;
+  }
+
+  &__button {
+    border: 2px solid #54A09E;
+    background-color: #54A09E;
+    color: #fff;
+    padding: 12px 60px;
+    margin: 0 auto;
+    border-radius: 5px;
+    width: 430px;
+    font-size: 20px;
+
+    &:hover {
+      background-color: #fff;
+      color: #64b6ac;
+      transition: 0.25s ease-in-out
+    }
   }
 }
 </style>

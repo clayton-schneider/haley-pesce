@@ -49,7 +49,7 @@
     <section class="instagram">
         <div class="instagram__container">
             <h3 class="instagram__headline">Hungry?</h3>
-            <h4 class="instagram__subtitle">For good eats follow me on Instagram</h4>
+            <h4 class="instagram__subtitle">For good eats follow me on <a class="instagram__link" href="www.google.com">Instagram</a></h4>
             <div class="instagram__gallery">
                 <div class="instagram__image"><g-image width="400px" src="~/assets/imgs/insta.jpg"/></div>
                 <div class="instagram__image"><g-image width="400px" src="~/assets/imgs/insta.jpg"/></div>
@@ -110,6 +110,9 @@ export default {
 <style lang="scss" scoped>
 @import url('https://fonts.googleapis.com/css?family=Arvo:400,700&display=swap');
 
+$breakpoint-tablet: 1040px;
+$breakpoint-mobile: 768px;
+
 body {
   font-family: 'Arvo', serif;
   margin:0;
@@ -117,7 +120,6 @@ body {
   line-height: 1.5;
 }
 .footer {
-    margin: auto;
     padding-top: 55px;
     background-color: #f2f7f9;
 
@@ -135,34 +137,60 @@ body {
     padding-top: 145px;
     background-color: #f2f7f9;
 
+    &__link {
+      text-decoration: none;
+      color: #54A09E;
+    }
+
     &__container {
-        margin: 0 120px;
+        margin: 0 20px;
+        @media (min-width: $breakpoint-tablet) {
+          margin: 0 120px;
+        }
     }
 
     &__headline {
         margin: 0;
-        font-size: 50px;
+        font-size: 35px;
+        text-align: center;
+        @media (min-width: $breakpoint-tablet) {
+          font-size: 50px;
+          text-align: left;
+        }
+        
     }
 
     &__subtitle {
         margin: 0;
-        font-size: 24px;
+        font-size: 20px;
         color: #F27A8F;
+        text-align: center;
+        @media (min-width: $breakpoint-tablet) {
+          font-size: 24px;
+          text-align: left;
+        }
     }
 
     &__gallery {
         display: flex;
         flex-wrap: wrap;
-        justify-content: space-between;
+        justify-content: center;
         margin-top: 40px;
+        @media (min-width: $breakpoint-tablet) {
+          justify-content: space-between;
+        }
     }
 
     &__image {
         overflow: hidden;
         margin-bottom: 20px;
-        height: 400px;
-        min-width: 400px;
+        height: 300px;
+        min-width: 300px;
         transition: 0.25s ease-in;
+        @media (min-width: $breakpoint-mobile) {
+          min-width: 400px;
+          height: 400px;
+        } 
 
         &:hover {
             opacity: 0.9;
@@ -178,11 +206,17 @@ body {
     &__headline {
         margin: 0;
         text-align: center;
-        font-size: 50px;
+        font-size: 35px;
+        @media (min-width: $breakpoint-tablet) {
+          font-size: 50px;
+        }
     }
 
     &__container {
-        margin: 50px 0;
+        margin: 25px 0;
+        @media (min-width: $breakpoint-mobile) {
+          margin: 50px 0;
+        }
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
@@ -190,10 +224,15 @@ body {
 
     &__post {
         border-radius: 5px;
-        margin: 0 10px;
-        max-width: 600px;
+        margin: 0 10px 25px 10px;
+        max-width: 350px;
         background-color: #fff;
         transition: 0.75s ease;
+
+        @media (min-width: $breakpoint-mobile) {
+          margin: 0 10px;
+          max-width: 600px;
+        }
     }
 
     &__post:hover {
@@ -214,8 +253,11 @@ body {
     }
 
     &__title {
-        font-size: 36px;
+        font-size: 24px;
         margin: 0 0 20px 0;
+        @media (min-width: $breakpoint-mobile) {
+          font-size: 36px;
+        }
     }
 
     &__excerpt {
@@ -244,18 +286,29 @@ body {
 
   &__header {
     color: #fff;
-    font-size: 60px;
+    font-size: 40px;
+    text-align: center;
     font-weight: bold;
     flex: 1;
     margin: 5px 0;
+    @media (min-width: $breakpoint-tablet) {
+      font-size: 60px;
+      text-align: left;
+    }
+    
   }
 
   &__typewriter {
     color: #fff;
     position: relative;
-    font-size: 30px;
+    font-size: 22px;
+    text-align: center;
     margin: 0;
     height: 50px;
+    @media (min-width: $breakpoint-tablet) {
+      font-size: 30px;
+      text-align: left;
+    }
   }
 
   &__typewriter::after {
@@ -269,19 +322,28 @@ body {
 
 header{
   display: flex;
-  width: 80%;
+  width: 90%;
+  @media (min-width: $breakpoint-mobile) {
+    width: 80%
+  }
   margin: auto;
   align-items: center;
   min-height: 15vh;
 }
 
 .logo-container {
-  flex: 3;
+  flex: 1;
+  @media (min-width: $breakpoint-tablet) {
+    flex: 3;
+  }
 }
 
 .nav {
   display: flex;
-  flex: 1;
+  flex: 2;
+  @media (min-width: $breakpoint-tablet) {
+    flex: 1;
+  }
   justify-content: space-around;
 
   &__link {
