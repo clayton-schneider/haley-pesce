@@ -31,5 +31,8 @@ module.exports = {
         publicPath: `/admin`
       }
     },
-  ]
+  ],
+  templates: {
+    blog: '/blog/:path'
+  }
 }

@@ -37,6 +37,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+$breakpoint-tablet: 1040px;
+$breakpoint-mobile: 768px;
+
 section {
   display: flex;
   flex-wrap: wrap;
@@ -45,6 +48,10 @@ section {
 .left {
   flex: 1;
   margin: 50px;
+  display: none;
+  @media (min-width: $breakpoint-mobile) {
+    display: block;
+  }
 }
 
 .right {
@@ -56,8 +63,11 @@ section {
 
     &__headline {
       color: #64b5ac;
-      font-size: 50px;
+      font-size: 35px;
       font-weight: 300;
+      @media (min-width: $breakpoint-mobile) {
+        font-size: 50px;
+      }
     }
 
   p {
@@ -73,7 +83,10 @@ section {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  width: 430px;
+  width: 300px;
+  @media (min-width: $breakpoint-mobile) {
+    width: 430px;
+  }
 
   &__label {
     flex: 100%;
@@ -98,16 +111,24 @@ section {
 
   &__name {
     // flex: 50%;
-    width: 182px;
+    width: 100%;
     display: flex;
     flex-direction: column;
+    @media (min-width: $breakpoint-mobile) {
+      width: 182px;
+    }
   }
 
   &__email {
     // flex: 50%;
-    width: 182px;
+    margin: 35px 0 0 0;
+    width: 100%;
     display: flex;
     flex-direction: column;
+    @media (min-width: $breakpoint-mobile) {
+      margin: 0;
+      width: 182px;
+    }
   }
 
   &__message {

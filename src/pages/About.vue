@@ -44,8 +44,11 @@ section {
 
   h1 {
     color: #64b5ac;
-    font-size: 50px;
+    font-size: 35px;
     font-weight: 300;
+    @media (min-width: $breakpoint-mobile) {
+      font-size: 50px;
+    }
   }
 
   p {

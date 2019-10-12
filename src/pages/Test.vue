@@ -22,35 +22,38 @@
         <h2 class="blog__headline">Follow My Recent Adventures!</h2>
         <div class="blog__container">
             <div class="blog__post" >
-                <div class="blog__image"><g-image width="600" height="300" src="~/assets/imgs/blog-post-two.jpg"/></div>
+                <div class="blog__image"><g-image width="450" height="300" src="~/../static/uploads/japan.png"/></div>
                 <div class="blog__content">
-                    <h3 class="blog__title">asdf</h3>
-                    <p class="blog__excerpt">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Inventore ducimus architecto sequi magni suscipit illum! Ipsam, neque deserunt iusto, commodi autem quidem minus dolorem, quibusdam excepturi minima itaque doloremque eius!</p>
+                    <h3 class="blog__title">Japan Is Bad</h3>
+                    <p class="blog__excerpt">Japan is bad</p>
+
+                    <g-link to=""></g-link>
                 </div>
             </div>
             <div class="blog__post" >
-                <div class="blog__image"><g-image width="600" height="300" src="~/assets/imgs/blog-post-two.jpg"/></div>
+                <div class="blog__image"><g-image width="600" height="300" src="~/../static/uploads/blog-post-two.jpg"/></div>
                 <div class="blog__content">
-                    <h3 class="blog__title">asdf</h3>
-                    <p class="blog__excerpt">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Inventore ducimus architecto sequi magni suscipit illum! Ipsam, neque deserunt iusto, commodi autem quidem minus dolorem, quibusdam excepturi minima itaque doloremque eius!</p>
+                    <h3 class="blog__title">Summer Recipe – Apple, Cherry Crisp</h3>
+                    <p class="blog__excerpt">In my travels this Summer, I found myself on Chebeague Island in Maine with my family. It was a beautiful island of only 341 inhabitants.</p>
                 </div>
             </div>
             <div class="blog__post" >
-                <div class="blog__image"><g-image width="600" height="300" src="~/assets/imgs/blog-post-two.jpg"/></div>
+                <div class="blog__image"><g-image width="600" height="300" src="~/../static/uploads/blog-post-one.jpg"/></div>
                 <div class="blog__content">
-                    <h3 class="blog__title">asdf</h3>
-                    <p class="blog__excerpt">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Inventore ducimus architecto sequi magni suscipit illum! Ipsam, neque deserunt iusto, commodi autem quidem minus dolorem, quibusdam excepturi minima itaque doloremque eius!</p>
+                    <h3 class="blog__title">Welcome to HCP Lifestyle</h3>
+                    <p class="blog__excerpt">Hello Everyone! My name is Haley Christine Pesce and I am a rising Senior at Babson College. Throughout my life, I have placed huge importance on fitness and maintaining proper nutrition.</p>
                 </div>
             </div>
         </div>
-        <button class="btn btn--blue center">More Adventures!</button>
+        <g-link class="nav__link" to="/blog"><button class="btn btn--blue center">More Adventures!</button></g-link>
     </section>
 
     <section class="instagram">
         <div class="instagram__container">
             <h3 class="instagram__headline">Hungry?</h3>
-            <h4 class="instagram__subtitle">For good eats follow me on <a class="instagram__link" href="www.google.com">Instagram</a></h4>
+            <h4 class="instagram__subtitle">For good eats follow me on <a class="instagram__link" href="https://www.instagram.com/hcp_eats/" target="_blank">Instagram</a></h4>
             <div class="instagram__gallery">
+                <div class="instagram__image"><g-image width="400px" src="~/assets/imgs/insta.jpg"/></div>
                 <div class="instagram__image"><g-image width="400px" src="~/assets/imgs/insta.jpg"/></div>
                 <div class="instagram__image"><g-image width="400px" src="~/assets/imgs/insta.jpg"/></div>
                 <div class="instagram__image"><g-image width="400px" src="~/assets/imgs/insta.jpg"/></div>
@@ -69,30 +72,6 @@
     </section>
   </body>
 </template>
-
-<page-query>
-query {
-  blog: allBlog(sortBy: "DESC") {
-    edges {
-      node {
-        id
-        title
-        content
-        path
-        featuredImage (width: 850)
-      }
-    }
-  }
-  instagram: allinstagram {
-    edges {
-      node {
-        url
-        stdRes
-      }
-    }
-  }
-}
-</page-query>
 
 <script>
 export default {
@@ -219,7 +198,7 @@ body {
         }
         display: flex;
         flex-wrap: wrap;
-        justify-content: center;
+        justify-content: space-around;
     }
 
     &__post {
@@ -227,16 +206,20 @@ body {
         margin: 0 10px 25px 10px;
         max-width: 350px;
         background-color: #fff;
-        transition: 0.75s ease;
+        // transition: 0.75s ease;
+        transition: transform .3s,background-color .3s,box-shadow .6s;
+        box-shadow: 1px 1px 5px 0 rgba(0,0,0,.02), 1px 1px 15px 0 rgba(0,0,0,.03);
 
         @media (min-width: $breakpoint-mobile) {
           margin: 0 10px;
-          max-width: 600px;
+          max-width: 450px;
         }
     }
 
     &__post:hover {
         background-color: #FFEFF2;
+        transform: translateY(-5px);
+        box-shadow: 1px 10px 30px 0 rgba(0,0,0,.1);
     }
 
     &__image {
@@ -254,9 +237,10 @@ body {
 
     &__title {
         font-size: 24px;
+        font-weight: 300;
         margin: 0 0 20px 0;
         @media (min-width: $breakpoint-mobile) {
-          font-size: 36px;
+          font-size: 30px;
         }
     }
 
