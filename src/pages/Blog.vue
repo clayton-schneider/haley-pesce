@@ -1,13 +1,13 @@
 <template>
   <Layout>
     <main class="main">
-      <h1>Blog</h1>
+      <h1 class="blog__headline">My Adventures</h1>
       <div class="posts">
         <div class="post-card content-box">
           <div class="post-card__header"><g-image width="770px" height="380px" class="post-card__image" src="~/../static/uploads/blog-post-two.jpg"/></div>
           <div class="post-card__content">
-            <h2 class="post-card__title">asdf</h2>
-            <p class="post-card__description">asdfasdfasdfasdf</p>
+            <h2 class="post-card__title">Summer Recipe – Apple, Cherry Crisp</h2>
+            <p class="post-card__description">In my travels this Summer, I found myself on Chebeague Island in Maine with my family. It was a beautiful island of only 341 inhabitants.</p>
 
             <g-link class="post-card__link"></g-link>
           </div>
@@ -82,6 +82,13 @@ body {
   }
 }
 
+.blog {
+  &__headline {
+    text-align: center;
+    margin: 50px auto;
+    font-size: 50px;
+  }
+}
 
 
 </style>

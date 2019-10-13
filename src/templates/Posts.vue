@@ -2,23 +2,20 @@
   <Layout>
     <div class="post-title">
       <h1 class="post-title__text">
-        {{ $page.post.title }}
+        {{ $page.blog.title }}
       </h1>
 
-      <PostMeta :post="$page.post" />
+      <PostMeta :post="$page.blog" />
 
     </div>
 
     <div class="post content-box">
       <div class="post__header">
-        <g-image alt="Cover image" v-if="$page.post.cover_image" :src="$page.post.cover_image" />
+        <g-image alt="Cover image" v-if="$page.blog.featuredImage" :src="$page.blog.featuredImage" />
       </div>
 
-      <div class="post__content" v-html="$page.post.content" />
+      <div class="post__content" v-html="$page.blog.content" />
 
-      <div class="post__footer">
-        <PostTags :post="$page.post" />
-      </div>
     </div>
 
   </Layout>
@@ -41,21 +38,6 @@ export default {
 }
 </script>
 
-<page-query>
-query Blog {
-  allBlog {
-    edges {
-      node {
-        path
-        content
-        excerpt
-        title
-        featuredImage
-      }
-    }
-  }
-}
-</page-query>
 
 <style lang="scss">
 .post-title {

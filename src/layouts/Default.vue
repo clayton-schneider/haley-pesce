@@ -4,7 +4,7 @@
       <div class="header__container">
         <div class="logo-container"><g-image src="~/assets/imgs/logo.png" width="55px"></g-image></div>
         <nav class="nav">
-          <g-link class="nav__link" to="/test">Home</g-link>
+          <g-link class="nav__link" to="/">Home</g-link>
           <g-link class="nav__link" to="/about">About</g-link>
           <g-link class="nav__link" to="/contact">Contact</g-link>
           <g-link class="nav__link" to="/blog">Blog</g-link>
