@@ -81,7 +81,7 @@ export default {
     }
   },
   mounted: function() {
-    this.typewriter(['Food Enthusiast, Traveler', 'Lifestyle'], 1500);
+    this.typewriter(['Food Enthusiast', 'Traveler', 'Lifestyle'], 1500);
   },
   methods: {
     typewriter(wordGroup, waitTime = 3000) {
