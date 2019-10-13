@@ -2,7 +2,7 @@
   <Layout>
     <section>
       <div class="left">
-        <g-image height="650px" src="~/assets/imgs/contact.jpg"/>
+        <g-image height="650px" src="../assets/imgs/contact.jpg"/>
 
       </div>
       <div class="right">

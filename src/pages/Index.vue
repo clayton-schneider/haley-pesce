@@ -1,9 +1,9 @@
 <template>
-  <body>
+  <main>
 
     <section class="landing background--main">
       <header>
-        <div class="logo-container"><g-image src="~/assets/imgs/logo.png" width="55px"></g-image></div>
+        <div class="logo-container"><g-image src="../assets/imgs/logo.png" width="55px"></g-image></div>
         <nav class="nav">
           <g-link class="nav__link" to="/about">About</g-link>
           <g-link class="nav__link" to="/contact">Contact</g-link>
@@ -22,23 +22,21 @@
         <h2 class="blog__headline">Follow My Recent Adventures!</h2>
         <div class="blog__container">
             <div class="blog__post" >
-                <div class="blog__image"><g-image width="450" height="300" src="~/../static/uploads/japan.png"/></div>
+                <div class="blog__image"><g-image width="450" height="300" src="../../static/uploads/japan.png"/></div>
                 <div class="blog__content">
                     <h3 class="blog__title">Japan Is Bad</h3>
                     <p class="blog__excerpt">Japan is bad</p>
-
-                    <g-link to=""></g-link>
                 </div>
             </div>
             <div class="blog__post" >
-                <div class="blog__image"><g-image width="600" height="300" src="~/../static/uploads/blog-post-two.jpg"/></div>
+                <div class="blog__image"><g-image width="600" height="300" src="../../static/uploads/blog-post-two.jpg"/></div>
                 <div class="blog__content">
                     <h3 class="blog__title">Summer Recipe – Apple, Cherry Crisp</h3>
                     <p class="blog__excerpt">In my travels this Summer, I found myself on Chebeague Island in Maine with my family. It was a beautiful island of only 341 inhabitants.</p>
                 </div>
             </div>
             <div class="blog__post" >
-                <div class="blog__image"><g-image width="600" height="300" src="~/../static/uploads/blog-post-one.jpg"/></div>
+                <div class="blog__image"><g-image width="600" height="300" src="../../static/uploads/blog-post-one.jpg"/></div>
                 <div class="blog__content">
                     <h3 class="blog__title">Welcome to HCP Lifestyle</h3>
                     <p class="blog__excerpt">Hello Everyone! My name is Haley Christine Pesce and I am a rising Senior at Babson College. Throughout my life, I have placed huge importance on fitness and maintaining proper nutrition.</p>
@@ -53,14 +51,14 @@
             <h3 class="instagram__headline">Hungry?</h3>
             <h4 class="instagram__subtitle">For good eats follow me on <a class="instagram__link" href="https://www.instagram.com/hcp_eats/" target="_blank">Instagram</a></h4>
             <div class="instagram__gallery">
-                <div class="instagram__image"><g-image width="400px" src="~/assets/imgs/insta.jpg"/></div>
-                <div class="instagram__image"><g-image width="400px" src="~/assets/imgs/insta.jpg"/></div>
-                <div class="instagram__image"><g-image width="400px" src="~/assets/imgs/insta.jpg"/></div>
-                <div class="instagram__image"><g-image width="400px" src="~/assets/imgs/insta.jpg"/></div>
-                <div class="instagram__image"><g-image width="400px" src="~/assets/imgs/insta.jpg"/></div>
-                <div class="instagram__image"><g-image width="400px" src="~/assets/imgs/insta.jpg"/></div>
-                <div class="instagram__image"><g-image width="400px" src="~/assets/imgs/insta.jpg"/></div>
-                <div class="instagram__image"><g-image width="400px" src="~/assets/imgs/insta.jpg"/></div>
+                <div class="instagram__image"><g-image width="400px" src="../assets/imgs/insta.jpg"/></div>
+                <div class="instagram__image"><g-image width="400px" src="../assets/imgs/insta.jpg"/></div>
+                <div class="instagram__image"><g-image width="400px" src="../assets/imgs/insta.jpg"/></div>
+                <div class="instagram__image"><g-image width="400px" src="../assets/imgs/insta.jpg"/></div>
+                <div class="instagram__image"><g-image width="400px" src="../assets/imgs/insta.jpg"/></div>
+                <div class="instagram__image"><g-image width="400px" src="../assets/imgs/insta.jpg"/></div>
+                <div class="instagram__image"><g-image width="400px" src="../assets/imgs/insta.jpg"/></div>
+                <div class="instagram__image"><g-image width="400px" src="../assets/imgs/insta.jpg"/></div>
 
             </div>
         </div>
@@ -69,7 +67,7 @@
     <section class="footer">
         <h4 class="footer__text">©2019 by HCP Lifestyle | Created by <a href="https://www.simply-sprout.com">Simply Sprout</a></h4>
     </section>
-  </body>
+  </main>
 </template>
 
 <script>
@@ -132,7 +130,7 @@ export default {
 $breakpoint-tablet: 1040px;
 $breakpoint-mobile: 768px;
 
-body {
+main {
   font-family: 'Arvo', serif;
   margin:0;
   padding:0;
