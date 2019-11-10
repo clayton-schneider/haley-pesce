@@ -20,7 +20,7 @@
             <label for="form-field-message" class="form__label">Message</label>
             <textarea class="form__textarea" name="form_fields[message]" id="form-field-message" rows="4"></textarea>
           </div>
-          <button class="form__button">Submit</button>
+          <button type="submit" class="form__button">Submit</button>
 
         </form>
       </div>
