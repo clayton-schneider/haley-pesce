@@ -7,7 +7,7 @@
       </div>
       <div class="right">
         <h1 class="right__headline">Contact Me!</h1>
-        <form class="form" name="contact" method="POST" data-netlify="true" action="/contact">
+        <form class="form" name="contact" method="POST" data-netlify="true">
           <div class="form__name">
             <input type="hidden" name="form-name" value="contact" />
             <label for="form-field-name" class="form__label">Name</label>
