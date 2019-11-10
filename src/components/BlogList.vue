@@ -1,19 +1,27 @@
 <template>
-  <Layout>
-    <main class="main">
-      <h1 class="blog__headline">My Adventures</h1>
-      <BlogList/>
-    </main>
-  </Layout>
+    <div class="posts">
+        <div class="post-card content-box" v-for="edge in $static.allBlog.edges" :key="edge.node.id">
+            <div class="post-card__header"><g-image width="770px" height="380px" class="post-card__image" :src="edge.node.featuredImage"/></div>
+            <div class="post-card__content">
+                <h2 class="post-card__title">{{ edge.node.title }}</h2>
+                <p class="post-card__description">{{ edge.node.excerpt }}</p>
+
+                <g-link class="post-card__link" :to="edge.node.path"></g-link>
+            </div>
+        </div>
+    </div>
 </template>
 
 <static-query>
 {
-  allBlog {
+  allBlog (order: ASC) {
     edges {
       node {
         id
-        content
+        title
+        excerpt
+        featuredImage
+        path
       }
     }
   }
@@ -21,20 +29,12 @@
 </static-query>
 
 <script>
-import BlogList from "~/components/BlogList.vue"
-
 export default {
-  components: {
-    BlogList
-  },
-  metaInfo: {
-    title: 'Blog'
-  }
+    
 }
 </script>
 
 <style lang="scss" scoped>
-
 body {
   background-color: #f3f7f9;
   font-size: 20px;
@@ -61,10 +61,13 @@ body {
     margin: calc(70px*-1) calc(70px*-1) calc(70px/2) calc(70px*-1);
     overflow: hidden;
     border-radius: 5px 5px 0 0 ;
+    height: 400px;
   }
 
   &__image {
-    min-width: 100%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
 
   &__title {
@@ -97,6 +100,4 @@ body {
     font-size: 50px;
   }
 }
-
-
 </style>

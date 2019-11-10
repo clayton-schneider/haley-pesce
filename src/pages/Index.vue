@@ -18,51 +18,9 @@
       </div>
     </section>
 
-    <section class="blog">
-        <h2 class="blog__headline">Follow My Recent Adventures!</h2>
-        <div class="blog__container">
-            <div class="blog__post" >
-                <div class="blog__image"><g-image width="450" height="300" src="../../static/uploads/japan.png"/></div>
-                <div class="blog__content">
-                    <h3 class="blog__title">Japan Is Bad</h3>
-                    <p class="blog__excerpt">Japan is bad</p>
-                </div>
-            </div>
-            <div class="blog__post" >
-                <div class="blog__image"><g-image width="600" height="300" src="../../static/uploads/blog-post-two.jpg"/></div>
-                <div class="blog__content">
-                    <h3 class="blog__title">Summer Recipe – Apple, Cherry Crisp</h3>
-                    <p class="blog__excerpt">In my travels this Summer, I found myself on Chebeague Island in Maine with my family. It was a beautiful island of only 341 inhabitants.</p>
-                </div>
-            </div>
-            <div class="blog__post" >
-                <div class="blog__image"><g-image width="600" height="300" src="../../static/uploads/blog-post-one.jpg"/></div>
-                <div class="blog__content">
-                    <h3 class="blog__title">Welcome to HCP Lifestyle</h3>
-                    <p class="blog__excerpt">Hello Everyone! My name is Haley Christine Pesce and I am a rising Senior at Babson College. Throughout my life, I have placed huge importance on fitness and maintaining proper nutrition.</p>
-                </div>
-            </div>
-        </div>
-        <g-link class="nav__link" to="/blog"><button class="btn btn--blue center">More Adventures!</button></g-link>
-    </section>
+    <BlogHome/>
 
-    <section class="instagram">
-        <div class="instagram__container">
-            <h3 class="instagram__headline">Hungry?</h3>
-            <h4 class="instagram__subtitle">For good eats follow me on <a class="instagram__link" href="https://www.instagram.com/hcp_eats/" target="_blank">Instagram</a></h4>
-            <div class="instagram__gallery">
-                <div class="instagram__image"><g-image width="400px" src="../assets/imgs/insta.jpg"/></div>
-                <div class="instagram__image"><g-image width="400px" src="../assets/imgs/insta.jpg"/></div>
-                <div class="instagram__image"><g-image width="400px" src="../assets/imgs/insta.jpg"/></div>
-                <div class="instagram__image"><g-image width="400px" src="../assets/imgs/insta.jpg"/></div>
-                <div class="instagram__image"><g-image width="400px" src="../assets/imgs/insta.jpg"/></div>
-                <div class="instagram__image"><g-image width="400px" src="../assets/imgs/insta.jpg"/></div>
-                <div class="instagram__image"><g-image width="400px" src="../assets/imgs/insta.jpg"/></div>
-                <div class="instagram__image"><g-image width="400px" src="../assets/imgs/insta.jpg"/></div>
-
-            </div>
-        </div>
-    </section>
+    <Instagram/>
 
     <section class="footer">
         <h4 class="footer__text">©2019 by HCP Lifestyle | Created by <a href="https://www.simply-sprout.com">Simply Sprout</a></h4>
@@ -71,7 +29,14 @@
 </template>
 
 <script>
+import Instagram from '~/components/Instagram.vue'
+import BlogHome from '~/components/BlogHome.vue'
+
 export default {
+  components: {
+    Instagram,
+    BlogHome
+  },
   metaInfo: {
     title: 'Haley Pesce - Lifestyle Blog!'
   },
@@ -146,147 +111,11 @@ main {
 
     &__text {
         margin: 10px 0;
-        font-size: 14px;
+        font-size: 10px;
         color: #777777;
-    }
-}
-.instagram {
-    padding-top: 145px;
-    background-color: #f2f7f9;
-
-    &__link {
-      text-decoration: none;
-      color: #54A09E;
-    }
-
-    &__container {
-        margin: 0 20px;
         @media (min-width: $breakpoint-tablet) {
-          margin: 0 120px;
+          font-size: 14px;
         }
-    }
-
-    &__headline {
-        margin: 0;
-        font-size: 35px;
-        text-align: center;
-        @media (min-width: $breakpoint-tablet) {
-          font-size: 50px;
-          text-align: left;
-        }
-        
-    }
-
-    &__subtitle {
-        margin: 0;
-        font-size: 20px;
-        color: #F27A8F;
-        text-align: center;
-        @media (min-width: $breakpoint-tablet) {
-          font-size: 24px;
-          text-align: left;
-        }
-    }
-
-    &__gallery {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        margin-top: 40px;
-        @media (min-width: $breakpoint-tablet) {
-          justify-content: space-between;
-        }
-    }
-
-    &__image {
-        overflow: hidden;
-        margin-bottom: 20px;
-        height: 300px;
-        min-width: 300px;
-        transition: 0.25s ease-in;
-        @media (min-width: $breakpoint-mobile) {
-          min-width: 400px;
-          height: 400px;
-        } 
-
-        &:hover {
-            opacity: 0.9;
-        }
-    }
-    
-}
-
-.blog {
-    padding-top: 145px;
-    background-color: #f2f7f9;
-
-    &__headline {
-        margin: 0;
-        text-align: center;
-        font-size: 35px;
-        @media (min-width: $breakpoint-tablet) {
-          font-size: 50px;
-        }
-    }
-
-    &__container {
-        margin: 25px 0;
-        @media (min-width: $breakpoint-mobile) {
-          margin: 50px 0;
-        }
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-around;
-    }
-
-    &__post {
-        border-radius: 5px;
-        margin: 0 10px 25px 10px;
-        max-width: 350px;
-        background-color: #fff;
-        // transition: 0.75s ease;
-        transition: transform .3s,background-color .3s,box-shadow .6s;
-        box-shadow: 1px 1px 5px 0 rgba(0,0,0,.02), 1px 1px 15px 0 rgba(0,0,0,.03);
-
-        @media (min-width: $breakpoint-mobile) {
-          margin: 0 10px;
-          max-width: 450px;
-        }
-    }
-
-    &__post:hover {
-        background-color: #FFEFF2;
-        transform: translateY(-5px);
-        box-shadow: 1px 10px 30px 0 rgba(0,0,0,.1);
-    }
-
-    &__image {
-        margin: 0;
-        height: 300px;
-        border-radius: 5px 5px 0 0;
-        overflow: hidden;
-    }
-
-    &__content {
-        margin: 0;
-        padding: 50px 40px 0 40px;
-        min-height: 350px;
-    }
-
-    &__title {
-        font-size: 24px;
-        font-weight: 300;
-        margin: 0 0 20px 0;
-        @media (min-width: $breakpoint-mobile) {
-          font-size: 30px;
-        }
-    }
-
-    &__excerpt {
-        margin: 0;
-        font-size: 14px;
-        color: #777777;
-        line-height: 2.5;
     }
 }
 

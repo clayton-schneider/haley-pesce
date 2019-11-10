@@ -40,6 +40,7 @@ body {
   margin:0;
   padding:0;
   line-height: 1.5;
+  background-color: #f2f7f9;
 }
 
 .header{

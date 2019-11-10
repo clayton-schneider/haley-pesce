@@ -1,6 +1,7 @@
 ---
 title: Welcome to HCP Lifestyle
 featuredImage: /uploads/blog-post-one.jpg
+excerpt: "Hello and welcome to my blog. Check out what this is all about!"
 ---
 Hello Everyone! My name is Haley Christine Pesce and I am a rising Senior at Babson College. Throughout my life, I have placed huge importance on fitness and maintaining proper nutrition. Being outdoors and appreciating all that the world has to offer is at the center of my life, realizing my passion for traveling. I believe that everyone should have the opportunity to live a wholesome and beautiful life, through proper understanding in the world around them.
 

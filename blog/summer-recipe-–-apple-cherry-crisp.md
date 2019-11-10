@@ -1,6 +1,7 @@
 ---
-title: 'Summer Recipe – Apple, Cherry Crisp'
+title: Summer Recipe – Apple, Cherry Crisp
 featuredImage: /uploads/blog-post-two.jpg
+excerpt: "In my travels this Summer I visited Chebeague Island in Maine. I wanted to share the apple, cherry crips that we made."
 ---
 In my travels this Summer, I found myself on Chebeague Island in Maine with my family. It was a beautiful island of only 341 inhabitants. Much to our delight, the island provided our family with a chance to unplug, unwind, and just enjoy eachother’s company. We learned to live in very tight quarters and just enjoy mother nature around us, as there was not much else to do on the island. Before traveling to this island, we knew little about the island itself and what it entailed (this was more of a spontaneous trip). To our surprise there was nothing but a small village store on the island with very very limited goods. This required us to get inventive with our meals. We had brought over 4 apples with us, along with a bag of cherries. With these as our base, we decided to make a hearty, healthy dessert one night! Invention created by my mother and I after a few glasses of wine heheh with some snacks from our AirBnB host.
 
