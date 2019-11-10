@@ -11,15 +11,15 @@
           <div class="form__name">
             <input type="hidden" name="form-name" value="contact" />
             <label for="form-field-name" class="form__label">Name</label>
-            <input size="1" type="text" name="form_fields[name]" id="form-field-name" class="form__input">
+            <input size="1" type="text" name="name" id="form-field-name" class="form__input">
           </div>
           <div class="form__email">
             <label for="form-field-email" class="form__label">Email</label>
-            <input size="1" type="email" name="form_fields[email]" id="form-field-email" class="form__input" required="required" aria-required="true">
+            <input size="1" type="email" name="email" id="form-field-email" class="form__input" required="required" aria-required="true">
           </div>
           <div class="form__message">
             <label for="form-field-message" class="form__label">Message</label>
-            <textarea class="form__textarea" name="form_fields[message]" id="form-field-message" rows="4"></textarea>
+            <textarea class="form__textarea" name="message" id="form-field-message" rows="4"></textarea>
           </div>
           <button type="submit" class="form__button">Submit</button>
 
