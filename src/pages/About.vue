@@ -54,7 +54,7 @@ section {
   p {
     font-size: 14px;
     color: #7a7a7a;
-    line-height: 2;
+    line-height: 2.5;
   }
 }
 
