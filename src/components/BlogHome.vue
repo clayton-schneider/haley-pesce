@@ -5,7 +5,7 @@
             <div class="blog__post" v-for="edge in $static.allBlog.edges"
                 :key="edge.node.id">
                 <a :href="edge.node.path">
-                <div class="blog__image-container"><g-image class="blog__image" width="450" height="300" :src= "edge.node.featuredImage"/></div>
+                <div class="blog__image-container"><g-image class="blog__image" :src= "edge.node.featuredImage"/></div>
                 <div class="blog__content">
                     <h3 class="blog__title">{{edge.node.title}}</h3>
                     <p class="blog__excerpt">{{edge.node.excerpt}}</p>
