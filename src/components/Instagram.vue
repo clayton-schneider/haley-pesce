@@ -4,18 +4,26 @@
             <h3 class="instagram__headline">Hungry?</h3>
             <h4 class="instagram__subtitle">For good eats follow me on <a class="instagram__link" href="https://www.instagram.com/hcp_eats/" target="_blank">Instagram</a></h4>
             <div class="instagram__gallery">
-                <div class="instagram__image"><g-image width="400px" src="../assets/imgs/insta.jpg"/></div>
-                <div class="instagram__image"><g-image width="400px" src="../assets/imgs/insta.jpg"/></div>
-                <div class="instagram__image"><g-image width="400px" src="../assets/imgs/insta.jpg"/></div>
-                <div class="instagram__image"><g-image width="400px" src="../assets/imgs/insta.jpg"/></div>
-                <div class="instagram__image"><g-image width="400px" src="../assets/imgs/insta.jpg"/></div>
-                <div class="instagram__image"><g-image width="400px" src="../assets/imgs/insta.jpg"/></div>
-                <div class="instagram__image"><g-image width="400px" src="../assets/imgs/insta.jpg"/></div>
-                <div class="instagram__image"><g-image width="400px" src="../assets/imgs/insta.jpg"/></div>
+                <div class="instagram__image-container" v-for="edge in $static.allinstagram.edges" :key="edge.node.id">
+                  <g-image class="instagram__image" :src="edge.node.url"/>
+                </div>
             </div>
         </div>
     </div>
 </template>
+
+<static-query>
+{
+  allinstagram (order: ASC, perPage: 8) {
+    edges {
+      node {
+        id
+        url
+      }
+    }
+  }
+}
+</static-query>
 
 <script>
 export default {
@@ -65,29 +73,37 @@ $breakpoint-mobile: 768px;
     }
 
     &__gallery {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        margin-top: 40px;
-        @media (min-width: $breakpoint-tablet) {
-          justify-content: space-between;
-        }
+      display: grid;
+      grid-template-columns: repeat(1, auto);
+      justify-items: center;
+      align-items: center;
+      grid-gap: 10px;
+      margin: 40px auto 0 auto;
+
+      @media screen and (min-width: 850px) {
+        grid-template-columns: repeat(2, auto);
+      }
+      @media screen and (min-width: 1880px) {
+        grid-template-columns: repeat(4, auto);
+      }
+    }
+
+    &__image-container {
+      height: 300px;
+      width: 300px;
+      transition: 0.25s;
+      @media (min-width: $breakpoint-mobile) {
+        width: 400px;
+        height: 400px;
+      }
+      &:hover {
+          opacity: 0.9;
+      }
     }
 
     &__image {
-        overflow: hidden;
-        margin-bottom: 20px;
-        height: 300px;
-        min-width: 300px;
-        transition: 0.25s ease-in;
-        @media (min-width: $breakpoint-mobile) {
-          min-width: 400px;
-          height: 400px;
-        } 
-
-        &:hover {
-            opacity: 0.9;
-        }
+          width: 100%;
+          height: 100%;
     }
     
 }

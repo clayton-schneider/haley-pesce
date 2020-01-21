@@ -9,7 +9,7 @@ const axios = require('axios')
 
 module.exports = function (api) {
   api.loadSource(async actions => {
-    const { data } = await axios.get('https://api.instagram.com/v1/users/self/media/recent?access_token=1902688513.09500a2.2e02639627734727ba0f482517de8be2&count=8   ')
+    const { data } = await axios.get('https://graph.instagram.com/me/media?fields=media_url&access_token=IGQVJWZA09qdkJMNW5pRnlKaDEwZAkRzRDFoQ0ItUWVhM1dnNjZAMb0tHd1dRbkx0Sk9ZALWtCY2lnYVZAzT1VHaGxyUUxzaThpVjcteWhDOGdSbzVYcjMwd0JqYUxvc2thVTdmMTE1X0RR')
 
     const contentType = actions.addContentType({
       typeName: 'instagram'
@@ -17,9 +17,8 @@ module.exports = function (api) {
 
     for (const item of data.data) {
       contentType.addNode({
-        url: item.link,
-        lowRes: item.images.low_resolution.url,
-        stdRes: item.images.standard_resolution.url
+        id: item.id,
+        url: item.media_url
       })
     }
   })
