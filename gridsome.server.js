@@ -11,8 +11,6 @@ async refreshToken => {
   const { response } = await axios.get('https://graph.instagram.com/refresh_access_token?grant_type=ig_refresh_token&&access_token=IGQVJWZA09qdkJMNW5pRnlKaDEwZAkRzRDFoQ0ItUWVhM1dnNjZAMb0tHd1dRbkx0Sk9ZALWtCY2lnYVZAzT1VHaGxyUUxzaThpVjcteWhDOGdSbzVYcjMwd0JqYUxvc2thVTdmMTE1X0RR')
 }
 
-refreshToken()
-
 module.exports = function (api) {
   api.loadSource(async actions => {
     const { data } = await axios.get('https://graph.instagram.com/me/media?fields=media_url&access_token=IGQVJWZA09qdkJMNW5pRnlKaDEwZAkRzRDFoQ0ItUWVhM1dnNjZAMb0tHd1dRbkx0Sk9ZALWtCY2lnYVZAzT1VHaGxyUUxzaThpVjcteWhDOGdSbzVYcjMwd0JqYUxvc2thVTdmMTE1X0RR')
