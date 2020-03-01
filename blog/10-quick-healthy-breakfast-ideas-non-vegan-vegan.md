@@ -1,5 +1,6 @@
 ---
 title: 10 Quick & Healthy Breakfast Ideas (Non-Vegan & Vegan)
+date: "2020-1-30"
 featuredImage: /uploads/d133b43e-0a36-4290-8865-46bedfe39dc6.jpg
 excerpt: >-
   Here are 10 quick & healthy breakfast ideas for you to implement into your
@@ -15,7 +16,8 @@ This is probably my go-to breakfast these days, especially since going plant-bas
 
 ![overnight oats](/uploads/img_0409.jpg)
 
-**My Go-To Recipe** (there are many variations online, and others I have if you want!):
+
+**My Go-To Recipe** (there are many variations online, and others I have if you want!):
 
 * 1 cup oats
 * 1 cup plant-based milk (you can use regular milk or water works perfect as well)
@@ -25,11 +27,13 @@ This is probably my go-to breakfast these days, especially since going plant-bas
 * Pinch of sea salt
 * Dash of cinnamon
 
-\*\*Combine all ingredients in a bowl the night before and place in the fridge. These can last for up to 5 days so feel free to make on Monday for the whole week! Possible toppings: nut butter, fresh berries/banana, goji berries, cocoa nibs, or granola. 
+\*\*Combine all ingredients in a bowl the night before and place in the fridge. These can last for up to 5 days so feel free to make on Monday for the whole week! 
+Possible toppings: nut butter, fresh berries/banana, goji berries, cocoa nibs, or granola. 
 
 
 
-## 2. Avocado Toast 
+## 2. Avocado Toast
+ 
 
 This has been a staple in my diet ever since I began working at my health food store, A New Leaf in Needham, MA. The avocado gives you all the healthy fats you need, and you can make so many variations with toppings so it's never boring! 
 
@@ -37,7 +41,8 @@ This has been a staple in my diet ever since I began working at my health food s
 
 ![avocado toast](/uploads/img_1706.jpg)
 
-**My Recipe w/ two variations:**
+
+**My Recipe w/ two variations:**
 
 * 2 slices gluten free bread (you can sub any bread your heart desires) -- MUST BE TOASTED
 * 1/2 ripe avocado
@@ -72,7 +77,8 @@ Both of these options are low in calorie and packed with protein for those focus
 
 ## 4. Medical Medium Heavy Metal Detox Smoothie
 
-Medical Medium (Anthony William) has devoted his life to helping people overcome chronic illnesses. Since age four, Anthony has been using his gift to “read” people's conditions and tell them how to recover their health. His unprecedented accuracy and success rate as the Medical Medium have earned him the trust and love of millions worldwide, among them movie stars, rock stars, billionaires, professional athletes who couldn't find a way to heal until he provided them with insights. Some of his followers include: Pharrell Williams, Novak Djokovic, Gwyneth Paltrow, Jenna Dewan, and Miranda Kerr. He has a series of books that I have read and I now follow several of his practices, which have made me feel better than ever. Check out his website [HERE](https://www.medicalmedium.com/). 
+
+Medical Medium (Anthony William) has devoted his life to helping people overcome chronic illnesses. Since age four, Anthony has been using his gift to “read” people's conditions and tell them how to recover their health. His unprecedented accuracy and success rate as the Medical Medium have earned him the trust and love of millions worldwide, among them movie stars, rock stars, billionaires, professional athletes who couldn't find a way to heal until he provided them with insights. Some of his followers include: Pharrell Williams, Novak Djokovic, Gwyneth Paltrow, Jenna Dewan, and Miranda Kerr. He has a series of books that I have read and I now follow several of his practices, which have made me feel better than ever. Check out his website [HERE](https://www.medicalmedium.com/). 
 
 ![heavy metal detox smoothie](/uploads/aa9266a909d89f35c03637a1b8dd981a.jpg)
 
@@ -87,7 +93,8 @@ Both of these options are low in calorie and packed with protein for those focus
 * 1 small handful of Atlantic dulse
 * Optional: water to blend
 
-\*\*Toxic heavy metals are virtually everywhere, and are present in things we come in contact with every day. As a result, most of us are carrying around heavy metals that have been with us for almost our whole lives and which have burrowed deep inside our tissues. These completely compromise our immune system, leaving us vulnerable to many diseases. Blend these ingredients and enjoy! This and other smoothies are great options for quick on-the-go meals. 
+\*\*Toxic heavy metals are virtually everywhere, and are present in things we come in contact with every day. As a result, most of us are carrying around heavy metals that have been with us for almost our whole lives and which have burrowed deep inside our tissues.
+ These completely compromise our immune system, leaving us vulnerable to many diseases. Blend these ingredients and enjoy! This and other smoothies are great options for quick on-the-go meals. 
 
 
 
@@ -110,7 +117,8 @@ Both of these options are low in calorie and packed with protein for those focus
 
 ![juice](/uploads/807750ad-3d93-4dd2-95de-eb926424e8c7.jpg)
 
-Juices are tough unless you have a juicer at home, or a juice place on the way to work/school. However, juices are a great way to pack a ton of your daily servings for fruits and veggies into one cup! Just drinking the juice without all of the pulp gives your body an easy way to digest the nutrients properly. Plus, it takes a lot less time than eating like a million fruits/veggies.
+
+Juices are tough unless you have a juicer at home, or a juice place on the way to work/school. However, juices are a great way to pack a ton of your daily servings for fruits and veggies into one cup! Just drinking the juice without all of the pulp gives your body an easy way to digest the nutrients properly. Plus, it takes a lot less time than eating like a million fruits/veggies.
 
 **My Go-To Recipe:**
 
@@ -128,7 +136,8 @@ This is so simple to make and this can be made on Sunday and divided into to-go 
 
 ![veggie frittata](/uploads/img_1709.jpg)
 
-**My Recipe:**
+
+**My Recipe:**
 
 1. Mandolin or slice thinly 2 medium-sized sweet potatoes -- place slices along the bottom of the pie dish and then up around the edges
 2. Whisk together 12 eggs and 1/2 cup milk 
@@ -144,11 +153,13 @@ This is so simple to make and this can be made on Sunday and divided into to-go 
 
 ## 8. Grain-Free Banana Walnut Muffins
 
-This is a new recipe I found from @kalejunkie on Instagram. I love baking these on Sunday and storing them in an airtight container for a quick grab&go in the morning. These can last the whole week! These are packed with protein, super healthy, and really filling with a piece of fruit! Check out her website for more inspo [HERE](https://www.kalejunkie.com/).
+
+This is a new recipe I found from @kalejunkie on Instagram. I love baking these on Sunday and storing them in an airtight container for a quick grab&go in the morning. These can last the whole week! These are packed with protein, super healthy, and really filling with a piece of fruit! Check out her website for more inspo [HERE](https://www.kalejunkie.com/).
 
 ![grain-free banana walnut muffins](/uploads/d133b43e-0a36-4290-8865-46bedfe39dc6.jpg)
 
-**INGREDIENTS:**
+**INGREDIENTS
+:**
 
 * 3 organic pasture raised eggs
 * 4 spotty bananas
@@ -178,7 +189,8 @@ This is so simple to make and this can be made on Sunday and divided into to-go 
 
 ## 9. Yogurt w/ Homemade Granola 
 
-I love this next one, courtesy of my good friend Carla and her mother. There is nothing quite like homemade granola. I personally love this breakfast because it's quick and yogurt gives you the necessary probiotics to promote gut health. I have been loving Kite Hill yogurts because they're made from almond milk (but you can use any type of yogurt - just avoid the yogurts with a TON of added sugars). Mix one container of yogurt (about 1/2 cup) with 1/4 cup of granola.
+
+I love this next one, courtesy of my good friend Carla and her mother. There is nothing quite like homemade granola. I personally love this breakfast because it's quick and yogurt gives you the necessary probiotics to promote gut health. I have been loving Kite Hill yogurts because they're made from almond milk (but you can use any type of yogurt - just avoid the yogurts with a TON of added sugars). Mix one container of yogurt (about 1/2 cup) with 1/4 cup of granola.
 
 **Recipe** (again, this can be made ahead of time):
 
@@ -188,11 +200,13 @@ This is so simple to make and this can be made on Sunday and divided into to-go 
 
 ## 10. Banana & PB on Rice Cakes
 
-This is a great idea for a quick grab and go breakfast, and this can be placed in a Tupperware and brought with you. 
+
+This is a great idea for a quick grab and go breakfast, and this can be placed in a Tupperware and brought with you. 
 
 ![rice cakes](/uploads/f468b9ea-21a9-4504-ab5f-9e67b0a1908b.jpg)
 
-**My Recipe:**
+
+**My Recipe:**
 
 * 2 apple cinnamon rice cakes
 * 2 TBS PB Fit (mix w/ 2 TBS of water) and spread on rice cakes -- you can also use regular nut butter!

@@ -19,7 +19,7 @@
 
 <static-query>
 {
-  allBlog (perPage: 3, order: ASC) {
+  allBlog (sortBy: "date", perPage: 3, order: DESC) {
     edges {
       node {
         id

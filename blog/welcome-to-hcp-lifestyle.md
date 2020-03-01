@@ -1,5 +1,6 @@
 ---
 title: Welcome to HCP Lifestyle
+date: "2019-11-10"
 featuredImage: /uploads/blog-post-one.jpg
 excerpt: "Hello and welcome to my blog. Check out what this is all about!"
 ---

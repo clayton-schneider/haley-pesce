@@ -89,15 +89,22 @@ $breakpoint-tablet: 1040px;
 
   &__content {
     margin: 0;
-    padding: 2s5px 20px;
+    padding: 25px 20px;
     font-size: 14px;
     color: #777777;
     line-height: 2.5;
     text-align: left;
+
+    /deep/ img {
+      max-width: 100%;
+    }
+
     @media (min-width: $breakpoint-tablet) {
       padding: 50px 40px;
     }
   }
 
 }
+
+
 </style>

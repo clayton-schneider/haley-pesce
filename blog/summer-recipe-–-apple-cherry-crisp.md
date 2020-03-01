@@ -1,5 +1,6 @@
 ---
 title: Summer Recipe – Apple, Cherry Crisp
+date: "2019-11-13"
 featuredImage: /uploads/blog-post-two.jpg
 excerpt: "In my travels this Summer I visited Chebeague Island in Maine. I wanted to share the apple, cherry crips that we made."
 ---

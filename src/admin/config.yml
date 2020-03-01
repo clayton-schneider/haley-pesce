@@ -13,6 +13,7 @@ collections:
     slug: "{{slug}}"
     fields:
       - {label: "Title", name: "title", widget: "string"}
+      - {label: "Date", name: "date", widget: "date", default: "", format: "YYYY-MM-DD"}
       - {label: "Featured Image", name: "featuredImage", widget: "image"}
       - {label: "Excerpt", name: "excerpt", widget: "text"}
       - {label: "Body", name: "body", widget: "markdown"}
