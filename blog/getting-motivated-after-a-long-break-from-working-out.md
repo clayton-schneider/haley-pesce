@@ -1,6 +1,6 @@
 ---
 title: Getting Motivated After a Long Break from Working Out
-date: "2020-2-20"
+date: "2020-02-20"
 featuredImage: /uploads/img_1729.jpg
 excerpt: >-
   Have you ever gotten sick and realized how wonderful it was to just sit around

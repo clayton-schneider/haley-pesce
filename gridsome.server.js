@@ -5,23 +5,30 @@
 // Changes here require a server restart.
 // To restart press CTRL + C in terminal and run `gridsome develop`
 
-const axios = require('axios')
+const Instagram = require('./instagram');
 
-async refreshToken => {
-  const { response } = await axios.get('https://graph.instagram.com/refresh_access_token?grant_type=ig_refresh_token&&access_token=IGQVJWZA09qdkJMNW5pRnlKaDEwZAkRzRDFoQ0ItUWVhM1dnNjZAMb0tHd1dRbkx0Sk9ZALWtCY2lnYVZAzT1VHaGxyUUxzaThpVjcteWhDOGdSbzVYcjMwd0JqYUxvc2thVTdmMTE1X0RR')
+if (process.env.NODE_ENV !== 'production') {
+  require('dotenv').config();
 }
 
-// refreshToken()
+const userConfig = {
+  username: process.env.USR,
+  password: process.env.PASS,
+  appId: process.env.APP_ID,
+  appSecret: process.env.APP_SECRET,
+  redirectURI: process.env.REDIRECT_URI
+}
 
 module.exports = function (api) {
   api.loadSource(async actions => {
-    const { data } = await axios.get('https://graph.instagram.com/me/media?fields=media_url&access_token=IGQVJWZA09qdkJMNW5pRnlKaDEwZAkRzRDFoQ0ItUWVhM1dnNjZAMb0tHd1dRbkx0Sk9ZALWtCY2lnYVZAzT1VHaGxyUUxzaThpVjcteWhDOGdSbzVYcjMwd0JqYUxvc2thVTdmMTE1X0RR')
+    const haleyInsta = new Instagram(userConfig);
+    const { data } = await haleyInsta.init();
 
     const contentType = actions.addContentType({
       typeName: 'instagram'
     })
 
-    for (const item of data.data) {
+    for (const item of data) {
       contentType.addNode({
         id: item.id,
         url: item.media_url

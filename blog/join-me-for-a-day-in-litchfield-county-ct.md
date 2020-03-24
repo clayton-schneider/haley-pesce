@@ -1,6 +1,6 @@
 ---
 title: 'Join Me for a Day in Litchfield County, CT'
-date: "2020-1-26"
+date: "2020-01-26"
 featuredImage: /uploads/img_1637-3-.jpg
 excerpt: >-
   Welcome to my home, Litchfield County! Today, I will bring you through a fun

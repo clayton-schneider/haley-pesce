@@ -1,6 +1,6 @@
 ---
 title: 10 Quick & Healthy Breakfast Ideas (Non-Vegan & Vegan)
-date: "2020-1-30"
+date: "2020-01-30"
 featuredImage: /uploads/d133b43e-0a36-4290-8865-46bedfe39dc6.jpg
 excerpt: >-
   Here are 10 quick & healthy breakfast ideas for you to implement into your
