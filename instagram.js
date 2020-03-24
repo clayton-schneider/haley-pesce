@@ -14,27 +14,33 @@ class Instagram {
     }
 
     async getAuthCode() {
-        const browser = await puppeteer.launch();
-        const page = await browser.newPage();
+        try {
+            const browser = await puppeteer.launch();
+            const page = await browser.newPage();
+        
+            await page.goto(this.authenticateURL);
+            await page.waitForSelector('button');
     
-        await page.goto(this.authenticateURL);
-        await page.waitForSelector('button');
+            await page.type("input[name='username']", this.username);
+            await page.type("input[name='password']", this.password);
+            await page.click("button[type='submit']");
+            await page.waitForNavigation();
+    
+            // probably where errors will occur when insta is updated and new class is generated
+            await page.click('.y3zKF');
+            await page.waitForNavigation();
+    
+            const url = page.url();
+            let authCode = url.split('code=')[1];
+            authCode = authCode.slice(0, -2);
+    
+            this.authCode = authCode;
+            await browser.close();
+        } catch (err) {
+            console.log(err);
+            throw new Error('Error getting auth code');
+        }
 
-        await page.type("input[name='username']", this.username);
-        await page.type("input[name='password']", this.password);
-        await page.click("button[type='submit']");
-        await page.waitForNavigation();
-
-        // probably where errors will occur when insta is updated and new class is generated
-        await page.click('.y3zKF');
-        await page.waitForNavigation();
-
-        const url = page.url();
-        let authCode = url.split('code=')[1];
-        authCode = authCode.slice(0, -2);
-
-        this.authCode = authCode;
-        await browser.close();
     }
 
     async getToken() {
@@ -55,6 +61,7 @@ class Instagram {
             this.accessToken = response.data.access_token
         } catch (err) {
             console.log(err);
+            throw new Error('Error getting access token');
         }
     }
 
@@ -64,6 +71,7 @@ class Instagram {
             return data;
         } catch(err) {
             console.log(err);
+            throw new Error('Error getting data');
         }
 
     }
